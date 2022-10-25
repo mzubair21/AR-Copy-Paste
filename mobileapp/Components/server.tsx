@@ -1,6 +1,6 @@
 import Base64 from './Base64'
 
-const URL = 'http://192.168.0.104:8080'
+const URL = 'http://192.168.0.101:8080'
 
 function arrayBufferToBase64(buffer: ArrayBuffer) {
   let binary = ''
@@ -16,12 +16,13 @@ function ping() {
 async function cut(imageURI: string) {
   const formData = new FormData()
   formData.append('data', {
+    // @ts-ignore
     uri: imageURI,
     name: 'photo',
     type: 'image/jpg',
   })
   //ReactNative Fetch BLOB
-  const resp = await fetch(URL + '/cut', {
+  const resp = await fetch('http://192.168.0.101:8080/cut', {
     method: 'POST',
     body: formData,
   }).then(async (res) => {
@@ -34,8 +35,27 @@ async function cut(imageURI: string) {
 
   return resp
 }
+async function paste(imageURI: string) {
+  console.log('Making Data for paste')
+  const formData = new FormData()
+  formData.append('data', {
+    // @ts-ignore
+    uri: imageURI,
+    name: 'photo',
+    type: 'image/jpg',
+  })
+  console.log('Calling Flask /paste')
+
+  const resp = await fetch('http://192.168.0.101:8080/paste', {
+    method: 'POST',
+    body: formData,
+  }).then((r) => r.json())
+  console.log('Flask Paste Request successfull')
+  return resp
+}
 
 export default {
   ping,
   cut,
+  paste,
 }

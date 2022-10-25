@@ -19,6 +19,8 @@ export default function App() {
   const [ImgSrc, setImgSrc] = useState('')
   const [type, setType] = useState(Camera.Constants.Type.back)
   const [Pressed, setPressed] = useState(false)
+  const [cutting, setCutting] = useState(true)
+  const [pasting, setPasting] = useState(false)
 
   let camera: any = null
   //Requesting for camera Permission
@@ -84,6 +86,42 @@ export default function App() {
     return resp
   }
 
+  async function paste() {
+    const start = Date.now()
+    console.log('')
+    console.log('Paste')
+
+    console.log('> taking image...')
+    // const opts = { skipProcessing: true, exif: false };
+    const opts = {}
+    let photo = await camera.takePictureAsync(opts)
+
+    console.log('> resizing...')
+    const { uri } = await ImageManipulator.manipulateAsync(photo.uri, [
+      // { resize: { width: 512, height: 1024 } },
+      { resize: { width: 350, height: 700 } },
+    ])
+
+    console.log('> sending to /paste...')
+    try {
+      const resp = await server.paste(uri)
+      console.log('Get Paste Response')
+      if (resp.status !== 'ok') {
+        if (resp.status === 'screen not found') {
+          console.log('screen not found')
+        } else {
+          throw new Error(resp)
+        }
+      } else {
+        setImgSrc('')
+      }
+    } catch (e) {
+      console.log('Something wrong with paste', e)
+    }
+
+    console.log(`Done in ${((Date.now() - start) / 1000).toFixed(3)}s`)
+  }
+
   async function PressIn() {
     //console.log('Pressed')
 
@@ -93,16 +131,15 @@ export default function App() {
       setImgSrc(resp)
     }
   }
-  function PressOut() {
-    //console.log('Released')
-    //setPressed(false)
 
-    //Experimental
-    if (ImgSrc == '') {
-      setPressed(true)
-    } else {
-      setPressed(false)
-      setImgSrc('')
+  async function PressOut() {
+    setPressed(false)
+    setPasting(true)
+
+    if (ImgSrc !== '') {
+      await paste()
+      //setImgSrc('')
+      setPasting(false)
     }
   }
   return (
