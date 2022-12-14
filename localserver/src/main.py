@@ -24,12 +24,12 @@ CORS(app)
 LOG_FORMATE = "%(levelname)s - %(asctime)s - %(message)s"
 logging.basicConfig(level=logging.DEBUG, format=LOG_FORMATE, handlers=[
         logging.StreamHandler(),
-        logging.FileHandler("E:\\AR-Cut_Paste - Demo\\localserver\\debug.log", mode="w"),
+        logging.FileHandler("E:\\AR-Cut_Paste - Final\\localserver\\debug.log", mode="w"),
     ])
  #------------------------------------#
 logger = logging.getLogger()
 basnet_service = 'http://u2net-predictor.tenant-compass.global.coreweave.com'
-photoshop_password = '123456'
+photoshop_password = '12345678'
  #------------------------------------#
 @app.route('/')
 def helloWorld():

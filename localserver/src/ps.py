@@ -13,7 +13,6 @@ DOC_HEIGHT = 1440
 def paste(filename, name, x, y, password):
 
     # There seem to be a bug on Windows where the path must be using unix separators.
-    # https://github.com/cyrildiagne/ar-cutpaste/issues/5
     filename = filename.replace('\\', '/')
 
     with PhotoshopConnection(password=password) as conn:
