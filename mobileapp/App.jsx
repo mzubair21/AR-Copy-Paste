@@ -97,7 +97,7 @@ const slides = [
     text: "Remove Background of  Images Easily",
     title: "Background Remover",
     image: {
-      uri: "https://raw.githubusercontent.com/mzubair21/AR-Cut-Paste/master/mobileapp/assets/images/2.png",
+      uri: "https://raw.githubusercontent.com/mzubair21/AR-Copy-Paste/master/mobileapp/assets/images/2.png",
     },
     backgroundColor: "#3395ff",
   },
@@ -106,7 +106,7 @@ const slides = [
     title: "Detecting Desktop Screen",
     text: "Identifying the Photoshop Screen",
     image: {
-      uri: "https://raw.githubusercontent.com/mzubair21/AR-Cut-Paste/master/mobileapp/assets/images/1.png",
+      uri: "https://raw.githubusercontent.com/mzubair21/AR-Copy-Paste/master/mobileapp/assets/images/1.png",
     },
     backgroundColor: "#febe29",
   },
@@ -115,7 +115,7 @@ const slides = [
     title: "Pasting Images on Photoshop",
     text: "Remotely Pasting Images to Photoshop in Couple of Seconds",
     image: {
-      uri: "https://raw.githubusercontent.com/mzubair21/AR-Cut-Paste/master/mobileapp/assets/images/3.png",
+      uri: "https://raw.githubusercontent.com/mzubair21/AR-Copy-Paste/master/mobileapp/assets/images/3.png",
     },
     backgroundColor: "#22bcb5",
   },
