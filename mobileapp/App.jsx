@@ -94,56 +94,29 @@ const styles = StyleSheet.create({
 const slides = [
   {
     key: "s1",
-    text: "remove background from image",
+    text: "Remove Background of  Images Easily",
     title: "Background Remover",
     image: {
-      uri: "https://raw.githubusercontent.com/tranhonghan/images/main/intro_mobile_recharge.png",
+      uri: "https://raw.githubusercontent.com/mzubair21/AR-Cut-Paste/master/mobileapp/assets/images/2.png",
     },
-    backgroundColor: "#20d2bb",
+    backgroundColor: "#3395ff",
   },
   {
     key: "s2",
-    title: "Flight Booking",
-    text: "Upto 25% off on Domestic Flights",
+    title: "Detecting Desktop Screen",
+    text: "Identifying the Photoshop Screen",
     image: {
-      uri: "https://raw.githubusercontent.com/tranhonghan/images/main/intro_flight_ticket_booking.png",
+      uri: "https://raw.githubusercontent.com/mzubair21/AR-Cut-Paste/master/mobileapp/assets/images/1.png",
     },
     backgroundColor: "#febe29",
   },
   {
     key: "s3",
-    title: "Great Offers",
-    text: "Enjoy Great offers on our all services",
+    title: "Pasting Images on Photoshop",
+    text: "Remotely Pasting Images to Photoshop in Couple of Seconds",
     image: {
-      uri: "https://raw.githubusercontent.com/tranhonghan/images/main/intro_discount.png",
+      uri: "https://raw.githubusercontent.com/mzubair21/AR-Cut-Paste/master/mobileapp/assets/images/3.png",
     },
     backgroundColor: "#22bcb5",
-  },
-  {
-    key: "s4",
-    title: "Best Deals",
-    text: " Best Deals on all our services",
-    image: {
-      uri: "https://raw.githubusercontent.com/tranhonghan/images/main/intro_best_deals.png",
-    },
-    backgroundColor: "#3395ff",
-  },
-  {
-    key: "s5",
-    title: "Bus Booking",
-    text: "Enjoy Travelling on Bus with flat 100% off",
-    image: {
-      uri: "https://raw.githubusercontent.com/tranhonghan/images/main/intro_bus_ticket_booking.png",
-    },
-    backgroundColor: "#f6437b",
-  },
-  {
-    key: "s6",
-    title: "Train Booking",
-    text: " 10% off on first Train booking",
-    image: {
-      uri: "https://raw.githubusercontent.com/tranhonghan/images/main/intro_train_ticket_booking.png",
-    },
-    backgroundColor: "#febe29",
   },
 ];

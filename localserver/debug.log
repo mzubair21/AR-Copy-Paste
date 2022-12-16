@@ -1,0 +1,46 @@
+WARNING - 2022-12-14 06:34:15,268 -  * Debugger is active!
+INFO - 2022-12-14 06:34:15,282 -  * Debugger PIN: 119-776-314
+INFO - 2022-12-14 06:34:15,365 -  * Running on http://192.168.0.101:8080/ (Press CTRL+C to quit)
+INFO - 2022-12-14 06:39:23,470 - ping
+DEBUG - 2022-12-14 06:39:23,474 - Starting new HTTP connection (1): u2net-predictor.tenant-compass.global.coreweave.com:80
+DEBUG - 2022-12-14 06:39:24,321 - http://u2net-predictor.tenant-compass.global.coreweave.com:80 "GET / HTTP/1.1" 200 None
+INFO - 2022-12-14 06:39:24,323 - ping: 200 b'Hello U^2-Net!'
+INFO - 2022-12-14 06:39:24,324 - 192.168.0.104 - - [14/Dec/2022 06:39:24] "GET /ping HTTP/1.1" 200 -
+INFO - 2022-12-14 06:39:44,044 -  CUT
+INFO - 2022-12-14 06:39:44,126 -  > sending to BASNet...
+DEBUG - 2022-12-14 06:39:44,133 - Starting new HTTP connection (1): u2net-predictor.tenant-compass.global.coreweave.com:80
+DEBUG - 2022-12-14 06:39:45,403 - http://u2net-predictor.tenant-compass.global.coreweave.com:80 "POST / HTTP/1.1" 200 13193
+INFO - 2022-12-14 06:39:45,607 -  > saving results...
+INFO - 2022-12-14 06:39:45,608 -  > opening mask...
+DEBUG - 2022-12-14 06:39:45,742 - STREAM b'IHDR' 16 13
+DEBUG - 2022-12-14 06:39:45,743 - STREAM b'IDAT' 41 13136
+INFO - 2022-12-14 06:39:45,751 -  > compositing final image...
+INFO - 2022-12-14 06:39:45,767 -  > saving final image...
+INFO - 2022-12-14 06:39:45,899 - Completed in 1.86s
+INFO - 2022-12-14 06:39:45,901 - 192.168.0.104 - - [14/Dec/2022 06:39:45] "POST /cut HTTP/1.1" 200 -
+INFO - 2022-12-14 06:39:55,641 -  PASTE
+INFO - 2022-12-14 06:39:55,827 -  > loading image...
+INFO - 2022-12-14 06:39:55,827 -  > grabbing screenshot...
+DEBUG - 2022-12-14 06:39:55,828 - running "None" in child process
+DEBUG - 2022-12-14 06:39:55,830 - command: ['E:\\AR-Cut_Paste - Final\\localserver\\venv\\Scripts\\python.exe', '-m', 'pyscreenshot.cli.grab_to_file', 'C:\\Users\\mzuba\\AppData\\Local\\Temp\\pyscreenshot32mm9qyk\\screenshot.png', '0', '0', '0', '0', '--backend', '']
+DEBUG - 2022-12-14 06:39:55,837 - process was started (pid=16528)
+DEBUG - 2022-12-14 06:39:56,368 - process has ended, return code=0
+DEBUG - 2022-12-14 06:39:56,368 - stdout=
+DEBUG - 2022-12-14 06:39:56,368 - stderr=
+DEBUG - 2022-12-14 06:39:56,375 - STREAM b'IHDR' 16 13
+DEBUG - 2022-12-14 06:39:56,376 - STREAM b'IDAT' 41 65536
+INFO - 2022-12-14 06:39:56,416 -  > finding projected point...
+INFO - 2022-12-14 06:39:56,564 - ScreenPoints , 153 , 126
+INFO - 2022-12-14 06:39:56,565 - 642, 529
+INFO - 2022-12-14 06:39:56,565 -  > sending to photoshop...
+DEBUG - 2022-12-14 06:39:56,771 - Opening the connection.
+DEBUG - 2022-12-14 06:39:58,775 - Thread-6: Dispatch thread starts.
+DEBUG - 2022-12-14 06:39:58,778 - Sending 996 bytes (total 1000 bytes)
+DEBUG - 2022-12-14 06:39:59,879 - 28 bytes returned, status = 0
+DEBUG - 2022-12-14 06:39:59,880 - {'status': 0, 'protocol': 1, 'transaction': 0, 'content_type': <ContentType.SCRIPT: 2>, 'body': b'undefined'}
+DEBUG - 2022-12-14 06:39:59,881 - Delete txn 0
+DEBUG - 2022-12-14 06:39:59,881 - Closing the connection.
+DEBUG - 2022-12-14 06:39:59,882 - Thread-6: [WinError 10038] An operation was attempted on something that is not a socket
+DEBUG - 2022-12-14 06:39:59,882 - Thread-6: Dispatch thread terminates.
+INFO - 2022-12-14 06:39:59,883 - Completed in 4.24s
+INFO - 2022-12-14 06:39:59,884 - 192.168.0.104 - - [14/Dec/2022 06:39:59] "POST /paste HTTP/1.1" 200 -

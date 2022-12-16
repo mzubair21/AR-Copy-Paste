@@ -19,6 +19,7 @@ export default function Home({ route }) {
   const [myip, setMyip] = useState(route.params.key);
   const [hasPermission, setHasPermission] = useState(null);
   const [ImgSrc, setImgSrc] = useState("");
+  //@ts-ignore
   const [type, setType] = useState(Camera.Constants.Type.back);
   const [Pressed, setPressed] = useState(false);
   const [cutting, setCutting] = useState(true);
